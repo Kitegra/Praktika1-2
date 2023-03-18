@@ -14,8 +14,8 @@ login = input("ВВедите вашь логин: ")
 password = getpass.getpass("ВВедите вашь пароль: ")
 
 #Расчёт хеш функции MD5 логина и пароля 
-login = hashlib.md5(login.encode())
-password = hashlib.md5(password.encode())
+login = hashlib.sha512(login.encode())
+password = hashlib.sha512(password.encode())
 
 #Проверка значения хеш функции MD5 логина и пароля 
 if LogPass[0] == login.hexdigest() and LogPass[1] == password.hexdigest():
